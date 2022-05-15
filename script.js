@@ -1,6 +1,12 @@
-const h2 = document.createElement("h2");
+function addMessageToPage(message){
+const newElement = document.createElement("h2");
+newElement.textContent = message;
+document.querySelector("body").appendChild(newElement);
+}
+const birthYear = 1996;
+//const currentYear = 2022;
+const currentYear = new Date().getFullYear()
+const currentAge = currentYear - birthYear;
 
-h2.textContent = "This content added by JavaScript, wu tang forever!!!";
 
-
-document.querySelector("body").appendChild(h2);
+addMessageToPage(`my current age is ${currentAge}`)
